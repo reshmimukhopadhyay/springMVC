@@ -48,7 +48,7 @@
       <deployment>
         <artifact name="Gradle : com.example : springProject-1.0-SNAPSHOT.war">
           <settings>
-            <option name="CONTEXT_PATH" value="/Gradle___com_example___springProject_1_0_SNAPSHOT_war" />
+            <option name="CONTEXT_PATH" value=""/>
           </settings>
         </artifact>
       </deployment>
