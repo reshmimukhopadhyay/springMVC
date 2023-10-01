@@ -9,9 +9,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Login Page From JSP</title>
 </head>
 <body>
-My First JSP
+My First JSP is  ${name} and my password is ${password}
 </body>
 </html>
