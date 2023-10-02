@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: rmukhop2
   Date: 01/10/23
-  Time: 6:56 pm
+  Time: 4:25 pm
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -13,6 +13,9 @@
     <title>Login to Welcome JSP</title>
 </head>
 <body>
-Welcome ${name}
+<form action="/welcome-jsp-post" method="Post">
+    Enter name: <input type="text" name="name"/> <input type="submit"/>
+
+</form>
 </body>
 </html>
