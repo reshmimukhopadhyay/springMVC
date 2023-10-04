@@ -13,9 +13,10 @@
     <title>Login to Welcome JSP</title>
 </head>
 <body>
-<form action="/login">
-    Enter name: <input type="text" name="name"/> <input type="submit"/>
-
+<form action="/spring-mvc/login" method="Post">
+    Name: <input type="text" name="name"/>
+    Password: <input type="text" name="password"/>
+    <input type="Submit"/>
 </form>
 </body>
 </html>

@@ -13,7 +13,7 @@
     <title>Login to Welcome JSP</title>
 </head>
 <body>
-<form action="/welcome-jsp-post" method="Post">
+<form action="/servlet-mvc/welcome-jsp-post" method="Post">
     Enter name: <input type="text" name="name"/> <input type="submit"/>
 
 </form>
