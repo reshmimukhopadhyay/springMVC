@@ -11,6 +11,7 @@
     <title>Login Page</title>
 </head>
 <body>
+    <p>${errorMessage}</p>
     <form action="/spring-mvc/login1" method="Post">
         Name: <input type="text" name="name"/>
         Password: <input type="text" name="password"/>

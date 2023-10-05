@@ -1,5 +1,6 @@
 package com.example.springproject.springmvc;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +12,9 @@ import javax.enterprise.inject.Model;
 
 @Controller
 public class LoginController {
+
+    @Autowired
+    private LoginAuthenticationService loginAuthenticationService;
 
     @RequestMapping(value="/login")
     //@ResponseBody
@@ -24,9 +28,12 @@ public class LoginController {
     }
 
     @RequestMapping(value="/login1",method=RequestMethod.POST)
-    public String LoginPageResponse(@RequestParam String name, ModelMap model){
+    public String LoginPageResponse(@RequestParam String name, @RequestParam String password,ModelMap model){
+        if(!loginAuthenticationService.loginAuthentication(name,password)){
+            return "Welcome_login_post_1";
+        }
         model.put("name",name);
-        System.out.println(name);
+        model.put("password",password);
         return "login_validation";
     }
 }
