@@ -11,6 +11,7 @@
     <title>Welcome</title>
 </head>
 <body>
-Welcome ${name}
+Welcome ${name}<br/>
+Now,you can manage <a href="/spring-mvc/list_todo?name=${name}">manage your todos</a>
 </body>
 </html>
