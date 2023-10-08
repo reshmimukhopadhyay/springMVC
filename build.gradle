@@ -21,6 +21,9 @@ tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
+tasks.withType(War){
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
 dependencies {
     compileOnly('jakarta.servlet:jakarta.servlet-api:5.0.0')
 
@@ -31,7 +34,12 @@ dependencies {
     testImplementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30'
     implementation 'jakarta.ws.rs:all:3.1.0'
     implementation group: 'jakarta.ws.rs', name: 'jakarta.ws.rs-api', version: '3.1.0'
-    implementation group: 'javax.servlet', name: 'jstl', version: '1.2'
+    implementation group: 'jakarta.servlet.jsp.jstl', name: 'jakarta.servlet.jsp.jstl-api', version: '3.0.0'
+    implementation group: 'org.glassfish.web', name: 'jakarta.servlet.jsp.jstl', version: '3.0.0'
+
+    implementation group: 'org.webjars', name: 'bootstrap', version: '5.3.2'
+    implementation group: 'org.webjars', name: 'jquery', version: '3.3.1'
+
 
     compileOnly group: 'javax', name: 'javaee-web-api', version: '8.0'
 

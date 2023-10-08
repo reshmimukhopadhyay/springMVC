@@ -12,7 +12,7 @@
 </head>
 <body>
  <h1>Add a Todo</h1>
-<form method="post">
+<form  method="Post">
     <input name="user" type="text"/>
     <input type="submit" value="Add"/>
 </form>

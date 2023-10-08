@@ -20,7 +20,7 @@ public class TodoController {
     @RequestMapping(value="/list_todo", method= RequestMethod.GET)
     public String showTodoList(ModelMap model){
         //model.addAttribute("name",name);
-        model.addAttribute("todo",todoService.retrieveTodo("Test5"));
+        model.addAttribute("todo",todoService.retrieveTodo("Test1"));
         return "listTodo";
     }
 
@@ -30,7 +30,7 @@ public class TodoController {
     }
 
     @RequestMapping(value="/add_todo",method = RequestMethod.POST)
-    public String addTodo(String user ){
+    public String addTodo(@RequestParam String user ){
         todoService.addTodo(user,"Test5 User",new Date(03/02/2023),false);
         return "redirect:list_todo";
     }
