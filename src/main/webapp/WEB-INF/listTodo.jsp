@@ -33,6 +33,7 @@ Hi ${name}<br/>
                 <td>${todos.user}</td>
                 <td>${todos.description}</td>
                 <td>${todos.done}</td>
+                <td><a href="/spring-mvc/delete_todo?id=${todos.id}" class="btn btn-danger"  >Delete</a></td>
             </tr>
             </c:forEach>
         </tbody>
